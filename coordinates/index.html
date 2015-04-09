@@ -1,70 +1,89 @@
-<!DOCTYPE html>
-<html>
 
+<!DOCTYPE html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
     <title>Ivy coordinates</title>
-    <meta name="viewport" content="width=device-width">
-    <meta name="description" content="Silex is a library of reusable code for Spark applications.">
-    <link rel="canonical" href="http://projects.willbenton.com/silexhttp://projects.willbenton.com/silex/coordinates/">
+    
+    <meta name="author" content="William Benton and others">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="http://projects.willbenton.com/silex/css/main.css">
+    <link href="/assets/themes/bootstrap/resources/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  
+    <!--[if lt IE 9]>
+      <script src="/assets/themes/bootstrap/resources/respond/Respond.min.js"></script>
+    <![endif]-->
 
-</head>
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+
+  </head>
+
+  <body>
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">silex</a>
+        </div>
+
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+          <ul class="nav navbar-nav">
+            
+            
 
 
-    <body>
+  
+    
+      
+      	
+      	<li><a href="/about/">About</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/docs/">Docs</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li class="active"><a href="/coordinates/" class="active">Ivy coordinates</a></li>
+      	
+      
+    
+  
+    
+  
+    
+  
 
-    <header class="site-header">
 
-  <div class="wrap">
 
-    <a class="site-title" href="http://projects.willbenton.com/silex/">silex</a>
-
-    <nav class="site-nav">
-      <a href="#" class="menu-icon">
-        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-           viewBox="0 0 18 15" enable-background="new 0 0 18 15" xml:space="preserve">
-          <path fill="#505050" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0
-            h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
-          <path fill="#505050" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484
-            h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
-          <path fill="#505050" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0
-            c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
-        </svg>
-      </a>
-      <div class="trigger">
-        
-          <a class="page-link" href="http://projects.willbenton.com/silex/about/">About</a>
-        
-          <a class="page-link" href="http://projects.willbenton.com/silex/docs/">Docs</a>
-        
-          <a class="page-link" href="http://projects.willbenton.com/silex/coordinates/">Ivy coordinates</a>
-        
-          
-        
-          
-        
+          </ul>
+        </div>
       </div>
     </nav>
+    <div class="container">
+      
+<div class="page-header">
+  <h1>Ivy coordinates </h1>
+</div>
 
-  </div>
-
-</header>
-
-
-    <div class="page-content">
-      <div class="wrap">
-      <div class="post">
-
-  <header class="post-header">
-    <h1>Ivy coordinates</h1>
-  </header>
-
-  <article class="post-content">
-  <p>To use Silex in your own projects, add the following library dependency to your build.sbt:</p>
+<div class="row">
+  <div class="col-xs-12">
+      <p>To use Silex in your own projects, add the following library dependency to your build.sbt:</p>
 
 <p><code>scala
 resolvers += "Will's bintray" at "https://dl.bintray.com/willb/maven/"
@@ -76,40 +95,22 @@ resolvers += "Will's bintray" at "https://dl.bintray.com/willb/maven/"
 libraryDependencies += "com.redhat.et" %% "silex" % "0.0.3"
 </code></p>
 
-  </article>
-
-</div>
-      </div>
-    </div>
-
-    <footer class="site-footer">
-
-  <div class="wrap">
-
-    <h2 class="footer-heading">silex</h2>
-
-    <div class="footer-col-1 column">
-      <ul>
-        <li>silex</li>
-        <li><a href="mailto:willb@acm.org">willb@acm.org</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-col-2 column">
-      <ul>
-        
-        
-      </ul>
-    </div>
-
-    <div class="footer-col-3 column">
-      <p class="text">Silex is a library of reusable code for Spark applications.</p>
-    </div>
-
   </div>
+</div>
 
-</footer>
 
+      <hr>
+      <footer>
+        <p>
+          &copy; 2015 William Benton and others
+        </p>
+      </footer>
+    </div>
 
-    </body>
+    
+
+    <script src="/assets/themes/bootstrap/resources/jquery/jquery.min.js"></script>
+    <script src="/assets/themes/bootstrap/resources/bootstrap/js/bootstrap.min.js"></script>
+  </body>
 </html>
+
