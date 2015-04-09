@@ -4,10 +4,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>silex</title>
+    <title>Using NaturalJoin on DataFrames</title>
     <meta name="viewport" content="width=device-width">
     <meta name="description" content="Silex is a library of reusable code for Spark applications.">
-    <link rel="canonical" href="http://projects.willbenton.com/silexhttp://projects.willbenton.com/silex/">
+    <link rel="canonical" href="http://projects.willbenton.com/silexhttp://projects.willbenton.com/silex/examples/2015/04/09/natjoin/">
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="http://projects.willbenton.com/silex/css/main.css">
@@ -57,16 +57,47 @@
 
     <div class="page-content">
       <div class="wrap">
-      <p><a href="https://github.com/willb/silex">silex</a> is a library of reusable code for Spark applications, factored out of applications we’ve built at Red Hat.  It will grow in the future but for now we have an application skeleton, some added functionality for data frames, and a histogramming RDD.</p>
+      <div class="post">
 
-<h3 id="recent-news">Recent news</h3>
+  <header class="post-header">
+    <h1>Using NaturalJoin on DataFrames</h1>
+    <p class="meta">Apr 9, 2015</p>
+  </header>
 
-<li>
-    <span class="post-date">Apr 9, 2015</span>
-    <a class="post-link" href="http://projects.willbenton.com/silex/examples/2015/04/09/natjoin/">Using NaturalJoin on DataFrames</a>
-  </li>
+  <article class="post-content">
+  <p>Since version 0.0.2, Silex has included <a href="http://projects.willbenton.com/silex/latest/api/#com.redhat.et.silex.frame.NaturalJoining">a simple interface to perform natural join operations on data frames</a>.  (For more background, <a href="http://chapeau.freevariable.com/2015/04/natural-join-for-spark-dataframes.html">see here</a>.)  Here’s an example of this functionality in action:</p>
+
+<pre><code>// Apologies to Paul Revere, but we wanted a join that
+// would actually filter some rows out.
+case class TwoIfByLand(i: Int, byLand: String) {}
+case class ThreeIfBySea(i: Int, bySea: String) {}
+
+val landDF = spark.parallelize((0 to 50 by 2).map { i =&gt; TwoIfByLand(i, s"land: $i") }).toDF()
+val seaDF = spark.parallelize((0 to 50 by 3).map { i =&gt; ThreeIfBySea(i, s"sea: $i") }).toDF()
+
+import com.redhat.et.silex.frame.NaturalJoin.implicits._
+
+landDF.natjoin(seaDF).orderBy("i").show
+</code></pre>
+
+<p>That should produce the following output.</p>
+
+<pre><code>i  byLand   bySea  
+0  land: 0  sea: 0 
+6  land: 6  sea: 6 
+12 land: 12 sea: 12
+18 land: 18 sea: 18
+24 land: 24 sea: 24
+30 land: 30 sea: 30
+36 land: 36 sea: 36
+42 land: 42 sea: 42
+48 land: 48 sea: 48
+</code></pre>
 
 
+  </article>
+
+</div>
       </div>
     </div>
 

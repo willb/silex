@@ -4,10 +4,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>silex</title>
+    <title>Ivy coordinates</title>
     <meta name="viewport" content="width=device-width">
     <meta name="description" content="Silex is a library of reusable code for Spark applications.">
-    <link rel="canonical" href="http://projects.willbenton.com/silexhttp://projects.willbenton.com/silex/">
+    <link rel="canonical" href="http://projects.willbenton.com/silexhttp://projects.willbenton.com/silex/coordinates/">
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="http://projects.willbenton.com/silex/css/main.css">
@@ -57,16 +57,28 @@
 
     <div class="page-content">
       <div class="wrap">
-      <p><a href="https://github.com/willb/silex">silex</a> is a library of reusable code for Spark applications, factored out of applications we’ve built at Red Hat.  It will grow in the future but for now we have an application skeleton, some added functionality for data frames, and a histogramming RDD.</p>
+      <div class="post">
 
-<h3 id="recent-news">Recent news</h3>
+  <header class="post-header">
+    <h1>Ivy coordinates</h1>
+  </header>
 
-<li>
-    <span class="post-date">Apr 9, 2015</span>
-    <a class="post-link" href="http://projects.willbenton.com/silex/examples/2015/04/09/natjoin/">Using NaturalJoin on DataFrames</a>
-  </li>
+  <article class="post-content">
+  <p>To use Silex in your own projects, add the following library dependency to your build.sbt:</p>
 
+<p><code>scala
+resolvers += "Will's bintray" at "https://dl.bintray.com/willb/maven/"
+</code></p>
 
+<p>and then add Silex as a dependency:</p>
+
+<p><code>scala
+libraryDependencies += "com.redhat.et" %% "silex" % "0.0.3"
+</code></p>
+
+  </article>
+
+</div>
       </div>
     </div>
 
