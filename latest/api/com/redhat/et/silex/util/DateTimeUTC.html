@@ -39,12 +39,12 @@
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>A simple structure representing a calendar date in UTC.</p><p>This class is deliberately extremely simple and delegates out to {{joda-time}}
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>A simple structure representing a calendar date in UTC.</p><p>This class is deliberately extremely simple and delegates out to <code>joda-time</code>
 for its actual functionality; it exists solely to abstract away our choice of
 date and time library.  (In JDK 8, it would probably make sense to use the new
 standard library date and time classes.)</p><p>If you need to deal with multiple time zones or different calendars,
 you're probably best served by using something more sophisticated (although the
-{{from}} method in the companion object to convert from a <span class="extype" name="org.joda.time.DateTime">org.joda.time.DateTime</span>
+<code>from</code> method in the companion object to convert from a <span class="extype" name="org.joda.time.DateTime">org.joda.time.DateTime</span>
 will convert to UTC first).
 </p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
@@ -173,7 +173,7 @@ will convert to UTC first).
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="com.redhat.et.silex.util.DateTimeUTC#as" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="com.redhat.et.silex.util.DateTimeUTC#as" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="as[T](implicitev:com.redhat.et.silex.util.DateTimeUTC=&gt;T):T"></a>
       <a id="as[T]((DateTimeUTC)⇒T):T"></a>
       <h4 class="signature">
@@ -185,7 +185,7 @@ will convert to UTC first).
         <span class="name">as</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span class="implicit">implicit </span><span name="ev">ev: (<a href="" class="extype" name="com.redhat.et.silex.util.DateTimeUTC">DateTimeUTC</a>) ⇒ <span class="extype" name="com.redhat.et.silex.util.DateTimeUTC.as.T">T</span></span>)</span><span class="result">: <span class="extype" name="com.redhat.et.silex.util.DateTimeUTC.as.T">T</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Converts from {{DateTimeUTC}} to {{T}}, if an appropriate implicit conversion function is in scope</p>
+      <p class="shortcomment cmt">Converts from <code>DateTimeUTC</code> to <code>T</code>, if an appropriate implicit conversion function is in scope</code></code></p><div class="fullcomment"><div class="comment cmt"><p>Converts from <code>DateTimeUTC</code> to <code>T</code>, if an appropriate implicit conversion function is in scope</p></div></div>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <a id="asInstanceOf[T0]:T0"></a>
