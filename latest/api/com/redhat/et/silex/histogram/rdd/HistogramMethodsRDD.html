@@ -2,17 +2,17 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>HistogramRDDPatch - com.redhat.et.silex.util.HistogramRDD.HistogramRDDPatch</title>
-          <meta name="description" content="HistogramRDDPatch - com.redhat.et.silex.util.HistogramRDD.HistogramRDDPatch" />
-          <meta name="keywords" content="HistogramRDDPatch com.redhat.et.silex.util.HistogramRDD.HistogramRDDPatch" />
+          <title>HistogramMethodsRDD - com.redhat.et.silex.histogram.rdd.HistogramMethodsRDD</title>
+          <meta name="description" content="HistogramMethodsRDD - com.redhat.et.silex.histogram.rdd.HistogramMethodsRDD" />
+          <meta name="keywords" content="HistogramMethodsRDD com.redhat.et.silex.histogram.rdd.HistogramMethodsRDD" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
-      <link href="../../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
-      <link href="../../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <link href="../../../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
       <script type="text/javascript">
          if(top === self) {
-            var url = '../../../../../index.html';
-            var hash = 'com.redhat.et.silex.util.HistogramRDD$$HistogramRDDPatch';
+            var url = '../../../../../../index.html';
+            var hash = 'com.redhat.et.silex.histogram.rdd.HistogramMethodsRDD';
             var anchor = window.location.hash;
             var anchor_opt = '';
             if (anchor.length >= 1)
@@ -24,9 +24,9 @@
         </head>
         <body class="type">
       <div id="definition">
-        <img src="../../../../../lib/class_big.png" />
-        <p id="owner"><a href="../../../../package.html" class="extype" name="com">com</a>.<a href="../../../package.html" class="extype" name="com.redhat">redhat</a>.<a href="../../package.html" class="extype" name="com.redhat.et">et</a>.<a href="../package.html" class="extype" name="com.redhat.et.silex">silex</a>.<a href="package.html" class="extype" name="com.redhat.et.silex.util">util</a>.<a href="HistogramRDD$.html" class="extype" name="com.redhat.et.silex.util.HistogramRDD">HistogramRDD</a></p>
-        <h1>HistogramRDDPatch</h1>
+        <img src="../../../../../../lib/class_big.png" />
+        <p id="owner"><a href="../../../../../package.html" class="extype" name="com">com</a>.<a href="../../../../package.html" class="extype" name="com.redhat">redhat</a>.<a href="../../../package.html" class="extype" name="com.redhat.et">et</a>.<a href="../../package.html" class="extype" name="com.redhat.et.silex">silex</a>.<a href="../package.html" class="extype" name="com.redhat.et.silex.histogram">histogram</a>.<a href="package.html" class="extype" name="com.redhat.et.silex.histogram.rdd">rdd</a></p>
+        <h1>HistogramMethodsRDD</h1>
       </div>
 
       <h4 id="signature" class="signature">
@@ -35,13 +35,14 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <span class="name">HistogramRDDPatch</span><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="../../../../../scala/package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+        <span class="name">HistogramMethodsRDD</span><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="../HistogramMethods.html" class="extype" name="com.redhat.et.silex.histogram.HistogramMethods">HistogramMethods</a>[<span class="extype" name="com.redhat.et.silex.histogram.rdd.HistogramMethodsRDD.T">T</span>]</span>
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Enriched RDD methods for histogramming and counting from <a href="../HistogramMethods.html" class="extype" name="com.redhat.et.silex.histogram.HistogramMethods">HistogramMethods</a></p><pre><span class="kw">import</span> com.redhat.et.silex.histogram.implicits._
+rdd.histBy(f)  <span class="cmt">// or other methods from HistogramMethods interface</span></pre></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><a href="../../../../../scala/package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><a href="../HistogramMethods.html" class="extype" name="com.redhat.et.silex.histogram.HistogramMethods">HistogramMethods</a>[<span class="extype" name="com.redhat.et.silex.histogram.rdd.HistogramMethodsRDD.T">T</span>], <span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <a href="../../../../../../scala/package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
         
 
@@ -59,7 +60,7 @@
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="com.redhat.et.silex.util.HistogramRDD.HistogramRDDPatch"><span>HistogramRDDPatch</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="com.redhat.et.silex.histogram.rdd.HistogramMethodsRDD"><span>HistogramMethodsRDD</span></li><li class="in" name="com.redhat.et.silex.histogram.HistogramMethods"><span>HistogramMethods</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -79,16 +80,16 @@
         <div id="allMembers">
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
-              <ol><li name="com.redhat.et.silex.util.HistogramRDD.HistogramRDDPatch#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(data:org.apache.spark.rdd.RDD[T])(implicitevidence$1:scala.reflect.ClassTag[T]):com.redhat.et.silex.util.HistogramRDD.HistogramRDDPatch[T]"></a>
-      <a id="&lt;init&gt;:HistogramRDDPatch[T]"></a>
+              <ol><li name="com.redhat.et.silex.histogram.rdd.HistogramMethodsRDD#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;(data:org.apache.spark.rdd.RDD[T])(implicitevidence$1:scala.reflect.ClassTag[T]):com.redhat.et.silex.histogram.rdd.HistogramMethodsRDD[T]"></a>
+      <a id="&lt;init&gt;:HistogramMethodsRDD[T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">HistogramRDDPatch</span><span class="params">(<span name="data">data: <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[<span class="extype" name="com.redhat.et.silex.util.HistogramRDD.HistogramRDDPatch.T">T</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<span class="extype" name="com.redhat.et.silex.util.HistogramRDD.HistogramRDDPatch.T">T</span>]</span>)</span>
+        <span class="name">HistogramMethodsRDD</span><span class="params">(<span name="data">data: <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[<span class="extype" name="com.redhat.et.silex.histogram.rdd.HistogramMethodsRDD.T">T</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<span class="extype" name="com.redhat.et.silex.histogram.rdd.HistogramMethodsRDD.T">T</span>]</span>)</span>
       </span>
       </h4>
       
@@ -110,7 +111,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <a href="../../../../../scala/package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <a href="../../../../../../scala/package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
@@ -149,7 +150,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <a href="../../../../../scala/package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <a href="../../../../../../scala/package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
@@ -188,42 +189,48 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">clone</span><span class="params">()</span><span class="result">: <a href="../../../../../scala/package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <a href="../../../../../../scala/package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="com.redhat.et.silex.util.HistogramRDD.HistogramRDDPatch#countBy" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="countBy[U](f:T=&gt;U)(implicitevidence$2:scala.reflect.ClassTag[U]):Map[U,Long]"></a>
-      <a id="countBy[U]((T)⇒U)(ClassTag[U]):Map[U,Long]"></a>
+    </li><li name="com.redhat.et.silex.histogram.rdd.HistogramMethodsRDD#countBy" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="countBy[U](f:T=&gt;U):Map[U,Long]"></a>
+      <a id="countBy[U]((T)⇒U):Map[U,Long]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">countBy</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="com.redhat.et.silex.util.HistogramRDD.HistogramRDDPatch.T">T</span>) ⇒ <span class="extype" name="com.redhat.et.silex.util.HistogramRDD.HistogramRDDPatch.countBy.U">U</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<span class="extype" name="com.redhat.et.silex.util.HistogramRDD.HistogramRDDPatch.countBy.U">U</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="com.redhat.et.silex.util.HistogramRDD.HistogramRDDPatch.countBy.U">U</span>, <span class="extype" name="scala.Long">Long</span>]</span>
+        <span class="name">countBy</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="com.redhat.et.silex.histogram.rdd.HistogramMethodsRDD.T">T</span>) ⇒ <span class="extype" name="com.redhat.et.silex.histogram.rdd.HistogramMethodsRDD.countBy.U">U</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="com.redhat.et.silex.histogram.rdd.HistogramMethodsRDD.countBy.U">U</span>, <span class="extype" name="scala.Long">Long</span>]</span>
       </span>
       </h4>
-      
-    </li><li name="com.redhat.et.silex.util.HistogramRDD.HistogramRDDPatch#countByFlat" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="countByFlat[U](f:T=&gt;Iterable[U])(implicitevidence$4:scala.reflect.ClassTag[U]):Map[U,Long]"></a>
-      <a id="countByFlat[U]((T)⇒Iterable[U])(ClassTag[U]):Map[U,Long]"></a>
+      <p class="shortcomment cmt">Count the occurrences of values returned by a function applied to RDD rows
+</p><div class="fullcomment"><div class="comment cmt"><p>Count the occurrences of values returned by a function applied to RDD rows
+</p></div><dl class="paramcmts block"><dt class="tparam">U</dt><dd class="cmt"><p>The return type of the function
+</p></dd><dt class="param">f</dt><dd class="cmt"><p>The function to apply to each RDD row</p></dd><dt>returns</dt><dd class="cmt"><p>A Map from occurring values to their counts</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.redhat.et.silex.histogram.rdd.HistogramMethodsRDD">HistogramMethodsRDD</a> → <a href="../HistogramMethods.html" class="extype" name="com.redhat.et.silex.histogram.HistogramMethods">HistogramMethods</a></dd></dl></div>
+    </li><li name="com.redhat.et.silex.histogram.rdd.HistogramMethodsRDD#countByFlat" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="countByFlat[U](f:T=&gt;Iterable[U]):Map[U,Long]"></a>
+      <a id="countByFlat[U]((T)⇒Iterable[U]):Map[U,Long]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">countByFlat</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="com.redhat.et.silex.util.HistogramRDD.HistogramRDDPatch.T">T</span>) ⇒ <a href="../../../../../scala/package.html#Iterable[+A]=Iterable[A]" class="extmbr" name="scala.Iterable">Iterable</a>[<span class="extype" name="com.redhat.et.silex.util.HistogramRDD.HistogramRDDPatch.countByFlat.U">U</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<span class="extype" name="com.redhat.et.silex.util.HistogramRDD.HistogramRDDPatch.countByFlat.U">U</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="com.redhat.et.silex.util.HistogramRDD.HistogramRDDPatch.countByFlat.U">U</span>, <span class="extype" name="scala.Long">Long</span>]</span>
+        <span class="name">countByFlat</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="com.redhat.et.silex.histogram.rdd.HistogramMethodsRDD.T">T</span>) ⇒ <a href="../../../../../../scala/package.html#Iterable[+A]=Iterable[A]" class="extmbr" name="scala.Iterable">Iterable</a>[<span class="extype" name="com.redhat.et.silex.histogram.rdd.HistogramMethodsRDD.countByFlat.U">U</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="com.redhat.et.silex.histogram.rdd.HistogramMethodsRDD.countByFlat.U">U</span>, <span class="extype" name="scala.Long">Long</span>]</span>
       </span>
       </h4>
-      
+      <p class="shortcomment cmt">Count the occurrences of values in a sequence returned by a function applied to RDD rows
+</p><div class="fullcomment"><div class="comment cmt"><p>Count the occurrences of values in a sequence returned by a function applied to RDD rows
+</p></div><dl class="paramcmts block"><dt class="tparam">U</dt><dd class="cmt"><p>The element type of the sequence returned by the function
+</p></dd><dt class="param">f</dt><dd class="cmt"><p>The function to apply to each RDD row: returns a sequence of values</p></dd><dt>returns</dt><dd class="cmt"><p>A Map from occurring values to their counts</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.redhat.et.silex.histogram.rdd.HistogramMethodsRDD">HistogramMethodsRDD</a> → <a href="../HistogramMethods.html" class="extype" name="com.redhat.et.silex.histogram.HistogramMethods">HistogramMethods</a></dd></dl></div>
     </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a>
       <a id="eq(AnyRef):Boolean"></a>
@@ -233,7 +240,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="../../../../../scala/package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="../../../../../../scala/package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
@@ -262,7 +269,7 @@
         <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="symbol">classOf[java.lang.Throwable]</span>
@@ -295,32 +302,34 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="com.redhat.et.silex.util.HistogramRDD.HistogramRDDPatch#histBy" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="histBy[U](f:T=&gt;U,normalize:Boolean,cumulative:Boolean)(implicitevidence$3:scala.reflect.ClassTag[U]):Iterable[(Double,U)]"></a>
-      <a id="histBy[U]((T)⇒U,Boolean,Boolean)(ClassTag[U]):Iterable[(Double,U)]"></a>
+    </li><li name="com.redhat.et.silex.histogram.rdd.HistogramMethodsRDD#histBy" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="histBy[U](f:T=&gt;U,normalized:Boolean,cumulative:Boolean):Seq[(U,Double)]"></a>
+      <a id="histBy[U]((T)⇒U,Boolean,Boolean):Seq[(U,Double)]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">histBy</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="com.redhat.et.silex.util.HistogramRDD.HistogramRDDPatch.T">T</span>) ⇒ <span class="extype" name="com.redhat.et.silex.util.HistogramRDD.HistogramRDDPatch.histBy.U">U</span></span>, <span name="normalize">normalize: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">false</span></span>, <span name="cumulative">cumulative: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">false</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<span class="extype" name="com.redhat.et.silex.util.HistogramRDD.HistogramRDDPatch.histBy.U">U</span>]</span>)</span><span class="result">: <a href="../../../../../scala/package.html#Iterable[+A]=Iterable[A]" class="extmbr" name="scala.Iterable">Iterable</a>[(<span class="extype" name="scala.Double">Double</span>, <span class="extype" name="com.redhat.et.silex.util.HistogramRDD.HistogramRDDPatch.histBy.U">U</span>)]</span>
+        <span class="name">histBy</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="com.redhat.et.silex.histogram.rdd.HistogramMethodsRDD.T">T</span>) ⇒ <span class="extype" name="com.redhat.et.silex.histogram.rdd.HistogramMethodsRDD.histBy.U">U</span></span>, <span name="normalized">normalized: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">false</span></span>, <span name="cumulative">cumulative: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">false</span></span>)</span><span class="result">: <a href="../../../../../../scala/package.html#Seq[+A]=Seq[A]" class="extmbr" name="scala.Seq">Seq</a>[(<span class="extype" name="com.redhat.et.silex.histogram.rdd.HistogramMethodsRDD.histBy.U">U</span>, <span class="extype" name="scala.Double">Double</span>)]</span>
       </span>
       </h4>
-      
-    </li><li name="com.redhat.et.silex.util.HistogramRDD.HistogramRDDPatch#histByFlat" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="histByFlat[U](f:T=&gt;Iterable[U],normalize:Boolean,cumulative:Boolean)(implicitevidence$5:scala.reflect.ClassTag[U]):Iterable[(Double,U)]"></a>
-      <a id="histByFlat[U]((T)⇒Iterable[U],Boolean,Boolean)(ClassTag[U]):Iterable[(Double,U)]"></a>
+      <p class="shortcomment cmt">Histogram the occurrences of values returned by a function applied to RDD rows</p><div class="fullcomment"><div class="comment cmt"><p>Histogram the occurrences of values returned by a function applied to RDD rows</p></div><dl class="paramcmts block"><dt class="tparam">U</dt><dd class="cmt"><p>The return type of the function</p></dd><dt class="param">f</dt><dd class="cmt"><p>The function to apply to each RDD row</p></dd><dt class="param">normalized</dt><dd class="cmt"><p>When true, histogram counts are normalized to sum to 1</p></dd><dt class="param">cumulative</dt><dd class="cmt"><p>When true, histogram counts are cumulative</p></dd><dt>returns</dt><dd class="cmt"><p>A sequence ((u0, n0), (u1, n1), ...), sorted in decreasing order of counts nj</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.redhat.et.silex.histogram.rdd.HistogramMethodsRDD">HistogramMethodsRDD</a> → <a href="../HistogramMethods.html" class="extype" name="com.redhat.et.silex.histogram.HistogramMethods">HistogramMethods</a></dd><dt>Note</dt><dd><span class="cmt"><p>When both cumulative and normalized are true, &quot;counts&quot; are analoglous to a sampled CDF
+</p></span></dd></dl></div>
+    </li><li name="com.redhat.et.silex.histogram.rdd.HistogramMethodsRDD#histByFlat" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="histByFlat[U](f:T=&gt;Iterable[U],normalized:Boolean,cumulative:Boolean):Seq[(U,Double)]"></a>
+      <a id="histByFlat[U]((T)⇒Iterable[U],Boolean,Boolean):Seq[(U,Double)]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">histByFlat</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="com.redhat.et.silex.util.HistogramRDD.HistogramRDDPatch.T">T</span>) ⇒ <a href="../../../../../scala/package.html#Iterable[+A]=Iterable[A]" class="extmbr" name="scala.Iterable">Iterable</a>[<span class="extype" name="com.redhat.et.silex.util.HistogramRDD.HistogramRDDPatch.histByFlat.U">U</span>]</span>, <span name="normalize">normalize: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">false</span></span>, <span name="cumulative">cumulative: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">false</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<span class="extype" name="com.redhat.et.silex.util.HistogramRDD.HistogramRDDPatch.histByFlat.U">U</span>]</span>)</span><span class="result">: <a href="../../../../../scala/package.html#Iterable[+A]=Iterable[A]" class="extmbr" name="scala.Iterable">Iterable</a>[(<span class="extype" name="scala.Double">Double</span>, <span class="extype" name="com.redhat.et.silex.util.HistogramRDD.HistogramRDDPatch.histByFlat.U">U</span>)]</span>
+        <span class="name">histByFlat</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="com.redhat.et.silex.histogram.rdd.HistogramMethodsRDD.T">T</span>) ⇒ <a href="../../../../../../scala/package.html#Iterable[+A]=Iterable[A]" class="extmbr" name="scala.Iterable">Iterable</a>[<span class="extype" name="com.redhat.et.silex.histogram.rdd.HistogramMethodsRDD.histByFlat.U">U</span>]</span>, <span name="normalized">normalized: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">false</span></span>, <span name="cumulative">cumulative: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">false</span></span>)</span><span class="result">: <a href="../../../../../../scala/package.html#Seq[+A]=Seq[A]" class="extmbr" name="scala.Seq">Seq</a>[(<span class="extype" name="com.redhat.et.silex.histogram.rdd.HistogramMethodsRDD.histByFlat.U">U</span>, <span class="extype" name="scala.Double">Double</span>)]</span>
       </span>
       </h4>
-      
+      <p class="shortcomment cmt">Histogram the occurrences of values in a sequence returned by a function applied to RDD rows</p><div class="fullcomment"><div class="comment cmt"><p>Histogram the occurrences of values in a sequence returned by a function applied to RDD rows</p></div><dl class="paramcmts block"><dt class="tparam">U</dt><dd class="cmt"><p>The element type of the sequence returned by the function</p></dd><dt class="param">f</dt><dd class="cmt"><p>The function to apply to each RDD row: returns a sequence of values</p></dd><dt class="param">normalized</dt><dd class="cmt"><p>When true, histogram counts are normalized to sum to 1</p></dd><dt class="param">cumulative</dt><dd class="cmt"><p>When true, histogram counts are cumulative</p></dd><dt>returns</dt><dd class="cmt"><p>A sequence ((u0, n0), (u1, n1), ...), sorted in decreasing order of counts nj</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.redhat.et.silex.histogram.rdd.HistogramMethodsRDD">HistogramMethodsRDD</a> → <a href="../HistogramMethods.html" class="extype" name="com.redhat.et.silex.histogram.HistogramMethods">HistogramMethods</a></dd><dt>Note</dt><dd><span class="cmt"><p>When both cumulative and normalized are true, &quot;counts&quot; are analoglous to a sampled CDF
+</p></span></dd></dl></div>
     </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <a id="isInstanceOf[T0]:Boolean"></a>
@@ -343,7 +352,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="../../../../../scala/package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="../../../../../../scala/package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
@@ -465,8 +474,14 @@
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="scala.AnyRef">
-              <h3>Inherited from <a href="../../../../../scala/package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></h3>
+        <div class="parent" name="com.redhat.et.silex.histogram.HistogramMethods">
+              <h3>Inherited from <a href="../HistogramMethods.html" class="extype" name="com.redhat.et.silex.histogram.HistogramMethods">HistogramMethods</a>[<span class="extype" name="com.redhat.et.silex.histogram.rdd.HistogramMethodsRDD.T">T</span>]</h3>
+            </div><div class="parent" name="scala.Serializable">
+              <h3>Inherited from <span class="extype" name="scala.Serializable">Serializable</span></h3>
+            </div><div class="parent" name="java.io.Serializable">
+              <h3>Inherited from <span class="extype" name="java.io.Serializable">Serializable</span></h3>
+            </div><div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <a href="../../../../../../scala/package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></h3>
             </div><div class="parent" name="scala.Any">
               <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
             </div>
@@ -485,6 +500,6 @@
       <div id="tooltip"></div>
 
       <div id="footer">  </div>
-      <script defer="defer" type="text/javascript" id="jquery-js" src="../../../../../lib/jquery.js"></script><script defer="defer" type="text/javascript" id="jquery-ui-js" src="../../../../../lib/jquery-ui.js"></script><script defer="defer" type="text/javascript" id="tools-tooltip-js" src="../../../../../lib/tools.tooltip.js"></script><script defer="defer" type="text/javascript" id="template-js" src="../../../../../lib/template.js"></script>
+      <script defer="defer" type="text/javascript" id="jquery-js" src="../../../../../../lib/jquery.js"></script><script defer="defer" type="text/javascript" id="jquery-ui-js" src="../../../../../../lib/jquery-ui.js"></script><script defer="defer" type="text/javascript" id="tools-tooltip-js" src="../../../../../../lib/tools.tooltip.js"></script><script defer="defer" type="text/javascript" id="template-js" src="../../../../../../lib/template.js"></script>
     </body>
       </html>
