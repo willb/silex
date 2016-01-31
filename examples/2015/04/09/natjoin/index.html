@@ -83,7 +83,7 @@
     <div class="content">
       <p>Since version 0.0.2, Silex has included <a href="/latest/api/#com.redhat.et.silex.frame.NaturalJoining">a simple interface to perform natural join operations on data frames</a>.  (For more background, <a href="http://chapeau.freevariable.com/2015/04/natural-join-for-spark-dataframes.html">see here</a>.)  Here’s an example of this functionality in action:</p>
 
-<div class="highlight"><pre><code class="language-scala" data-lang="scala"><span class="c1">// Apologies to Paul Revere, but we wanted a join that</span>
+<figure class="highlight"><pre><code class="language-scala" data-lang="scala"><span class="c1">// Apologies to Paul Revere, but we wanted a join that</span>
 <span class="c1">// would actually filter some rows out.</span>
 <span class="k">case</span> <span class="k">class</span> <span class="nc">TwoIfByLand</span><span class="o">(</span><span class="n">i</span><span class="k">:</span> <span class="kt">Int</span><span class="o">,</span> <span class="n">byLand</span><span class="k">:</span> <span class="kt">String</span><span class="o">)</span> <span class="o">{}</span>
 <span class="k">case</span> <span class="k">class</span> <span class="nc">ThreeIfBySea</span><span class="o">(</span><span class="n">i</span><span class="k">:</span> <span class="kt">Int</span><span class="o">,</span> <span class="n">bySea</span><span class="k">:</span> <span class="kt">String</span><span class="o">)</span> <span class="o">{}</span>
@@ -93,7 +93,7 @@
 
 <span class="k">import</span> <span class="nn">com.redhat.et.silex.frame.NaturalJoin.implicits._</span>
 
-<span class="n">landDF</span><span class="o">.</span><span class="n">natjoin</span><span class="o">(</span><span class="n">seaDF</span><span class="o">).</span><span class="n">orderBy</span><span class="o">(</span><span class="s">&quot;i&quot;</span><span class="o">).</span><span class="n">show</span></code></pre></div>
+<span class="n">landDF</span><span class="o">.</span><span class="n">natjoin</span><span class="o">(</span><span class="n">seaDF</span><span class="o">).</span><span class="n">orderBy</span><span class="o">(</span><span class="s">&quot;i&quot;</span><span class="o">).</span><span class="n">show</span></code></pre></figure>
 
 <p>That should produce the following output.</p>
 
@@ -120,7 +120,7 @@
       <hr>
       <footer>
         <p>
-          &copy; 2015 William Benton and others
+          &copy; 2016 William Benton and others
         </p>
       </footer>
     </div>

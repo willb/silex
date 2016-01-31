@@ -182,7 +182,7 @@ can operate naturally inside the lazy-transform formalism
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
     </li><li name="org.apache.spark.rdd.RDD#aggregate" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="aggregate[U&lt;:&lt;?&gt;](zeroValue:&lt;?&gt;)(seqOp:&lt;?&gt;,combOp:&lt;?&gt;)(implicitevidence$32:&lt;?&gt;):U"></a>
+      <a id="aggregate[U](zeroValue:U)(seqOp:(U,T)=&gt;U,combOp:(U,U)=&gt;U)(implicitevidence$33:scala.reflect.ClassTag[U]):U"></a>
       <a id="aggregate[U](U)((U,V)⇒U,(U,U)⇒U)(ClassTag[U]):U"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -292,7 +292,7 @@ can operate naturally inside the lazy-transform formalism
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RDD</dd></dl></div>
     </li><li name="org.apache.spark.rdd.RDD#collect" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="collect[U](f:PartialFunction[T,U])(implicitevidence$31:scala.reflect.ClassTag[U]):org.apache.spark.rdd.RDD[U]"></a>
+      <a id="collect[U](f:PartialFunction[T,U])(implicitevidence$32:scala.reflect.ClassTag[U]):org.apache.spark.rdd.RDD[U]"></a>
       <a id="collect[U](PartialFunction[V,U])(ClassTag[U]):RDD[U]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -355,10 +355,7 @@ can operate naturally inside the lazy-transform formalism
         <span class="name">countApprox</span><span class="params">(<span name="timeout">timeout: <span class="extype" name="scala.Long">Long</span></span>, <span name="confidence">confidence: <span class="extype" name="scala.Double">Double</span></span>)</span><span class="result">: <span class="extype" name="org.apache.spark.partial.PartialResult">PartialResult</span>[<span class="extype" name="org.apache.spark.partial.BoundedDouble">BoundedDouble</span>]</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RDD</dd><dt>Annotations</dt><dd>
-                <span class="name">@Experimental</span><span class="args">()</span>
-              
-        </dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RDD</dd></dl></div>
     </li><li name="org.apache.spark.rdd.RDD#countApproxDistinct" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="countApproxDistinct(relativeSD:&lt;?&gt;):Long"></a>
       <a id="countApproxDistinct(Double):Long"></a>
@@ -384,10 +381,7 @@ can operate naturally inside the lazy-transform formalism
         <span class="name">countApproxDistinct</span><span class="params">(<span name="p">p: <span class="extype" name="scala.Int">Int</span></span>, <span name="sp">sp: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Long">Long</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RDD</dd><dt>Annotations</dt><dd>
-                <span class="name">@Experimental</span><span class="args">()</span>
-              
-        </dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RDD</dd></dl></div>
     </li><li name="org.apache.spark.rdd.RDD#countByValue" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="countByValue()(implicitord:&lt;?&gt;):scala.collection.Map[T,Long]"></a>
       <a id="countByValue()(Ordering[V]):Map[V,Long]"></a>
@@ -413,10 +407,7 @@ can operate naturally inside the lazy-transform formalism
         <span class="name">countByValueApprox</span><span class="params">(<span name="timeout">timeout: <span class="extype" name="scala.Long">Long</span></span>, <span name="confidence">confidence: <span class="extype" name="scala.Double">Double</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="ord">ord: <a href="../../../../../../scala/package.html#Ordering[T]=scala.math.Ordering[T]" class="extmbr" name="scala.Ordering">Ordering</a>[<span class="extype" name="com.redhat.et.silex.rdd.promise.PromiseRDD.V">V</span>]</span>)</span><span class="result">: <span class="extype" name="org.apache.spark.partial.PartialResult">PartialResult</span>[<span class="extype" name="scala.collection.Map">Map</span>[<span class="extype" name="com.redhat.et.silex.rdd.promise.PromiseRDD.V">V</span>, <span class="extype" name="org.apache.spark.partial.BoundedDouble">BoundedDouble</span>]]</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RDD</dd><dt>Annotations</dt><dd>
-                <span class="name">@Experimental</span><span class="args">()</span>
-              
-        </dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RDD</dd></dl></div>
     </li><li name="org.apache.spark.rdd.RDD#dependencies" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="dependencies:Seq[org.apache.spark.Dependency[_]]"></a>
       <a id="dependencies:Seq[Dependency[_]]"></a>
@@ -528,7 +519,7 @@ can operate naturally inside the lazy-transform formalism
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RDD</dd></dl></div>
     </li><li name="org.apache.spark.rdd.RDD#firstParent" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="firstParent[U](implicitevidence$34:scala.reflect.ClassTag[U]):org.apache.spark.rdd.RDD[U]"></a>
+      <a id="firstParent[U](implicitevidence$35:scala.reflect.ClassTag[U]):org.apache.spark.rdd.RDD[U]"></a>
       <a id="firstParent[U](ClassTag[U]):RDD[U]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -567,7 +558,7 @@ can operate naturally inside the lazy-transform formalism
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RDD</dd></dl></div>
     </li><li name="org.apache.spark.rdd.RDD#foreach" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="foreach(f:T=&gt;Unit):Unit"></a>
+      <a id="foreach(f:&lt;?&gt;):Unit"></a>
       <a id="foreach((V)⇒Unit):Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -631,6 +622,25 @@ can operate naturally inside the lazy-transform formalism
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>RDD</dd></dl></div>
+    </li><li name="org.apache.spark.rdd.RDD#getNumPartitions" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getNumPartitions:Int"></a>
+      <a id="getNumPartitions:Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getNumPartitions</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RDD</dd><dt>Annotations</dt><dd>
+                <span class="name">@Since</span><span class="args">(<span>
+      
+      <span class="symbol">&quot;1.6.0&quot;</span>
+    </span>)</span>
+              
+        </dd></dl></div>
     </li><li name="com.redhat.et.silex.rdd.promise.PromiseRDD#getPartitions" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getPartitions:Array[org.apache.spark.Partition]"></a>
       <a id="getPartitions:Array[Partition]"></a>
@@ -865,6 +875,19 @@ can operate naturally inside the lazy-transform formalism
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RDD</dd></dl></div>
+    </li><li name="org.apache.spark.rdd.RDD#localCheckpoint" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="localCheckpoint():RDD.this.type"></a>
+      <a id="localCheckpoint():PromiseRDD.this.type"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">localCheckpoint</span><span class="params">()</span><span class="result">: <a href="" class="extype" name="com.redhat.et.silex.rdd.promise.PromiseRDD">PromiseRDD</a>.this.type</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RDD</dd></dl></div>
     </li><li name="org.apache.spark.Logging#log" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="log:org.slf4j.Logger"></a>
       <a id="log:Logger"></a>
@@ -1035,7 +1058,7 @@ can operate naturally inside the lazy-transform formalism
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RDD</dd></dl></div>
     </li><li name="org.apache.spark.rdd.RDD#mapPartitions" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="mapPartitions[U&lt;:&lt;?&gt;](f:&lt;?&gt;,preservesPartitioning:&lt;?&gt;)(implicitevidence$6:&lt;?&gt;):org.apache.spark.rdd.RDD[U]"></a>
+      <a id="mapPartitions[U](f:Iterator[T]=&gt;Iterator[U],preservesPartitioning:Boolean)(implicitevidence$6:scala.reflect.ClassTag[U]):org.apache.spark.rdd.RDD[U]"></a>
       <a id="mapPartitions[U]((Iterator[V])⇒Iterator[U],Boolean)(ClassTag[U]):RDD[U]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1048,7 +1071,7 @@ can operate naturally inside the lazy-transform formalism
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RDD</dd></dl></div>
     </li><li name="org.apache.spark.rdd.RDD#mapPartitionsWithIndex" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="mapPartitionsWithIndex[U&lt;:&lt;?&gt;](f:&lt;?&gt;,preservesPartitioning:&lt;?&gt;)(implicitevidence$7:&lt;?&gt;):org.apache.spark.rdd.RDD[U]"></a>
+      <a id="mapPartitionsWithIndex[U](f:(Int,Iterator[T])=&gt;Iterator[U],preservesPartitioning:Boolean)(implicitevidence$8:scala.reflect.ClassTag[U]):org.apache.spark.rdd.RDD[U]"></a>
       <a id="mapPartitionsWithIndex[U]((Int,Iterator[V])⇒Iterator[U],Boolean)(ClassTag[U]):RDD[U]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1139,7 +1162,7 @@ can operate naturally inside the lazy-transform formalism
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li name="org.apache.spark.rdd.RDD#parent" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="parent[U&lt;:&lt;?&gt;](j:&lt;?&gt;)(implicitevidence$35:&lt;?&gt;):org.apache.spark.rdd.RDD[U]"></a>
+      <a id="parent[U](j:Int)(implicitevidence$36:scala.reflect.ClassTag[U]):org.apache.spark.rdd.RDD[U]"></a>
       <a id="parent[U](Int)(ClassTag[U]):RDD[U]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1542,7 +1565,7 @@ can operate naturally inside the lazy-transform formalism
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RDD</dd></dl></div>
     </li><li name="org.apache.spark.rdd.RDD#treeAggregate" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="treeAggregate[U&lt;:&lt;?&gt;](zeroValue:&lt;?&gt;)(seqOp:&lt;?&gt;,combOp:&lt;?&gt;,depth:&lt;?&gt;)(implicitevidence$33:&lt;?&gt;):U"></a>
+      <a id="treeAggregate[U&lt;:&lt;?&gt;](zeroValue:&lt;?&gt;)(seqOp:&lt;?&gt;,combOp:&lt;?&gt;,depth:&lt;?&gt;)(implicitevidence$34:&lt;?&gt;):U"></a>
       <a id="treeAggregate[U](U)((U,V)⇒U,(U,U)⇒U,Int)(ClassTag[U]):U"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1651,7 +1674,7 @@ can operate naturally inside the lazy-transform formalism
               
         </dd></dl></div>
     </li><li name="org.apache.spark.rdd.RDD#zip" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="zip[U](other:org.apache.spark.rdd.RDD[U])(implicitevidence$12:scala.reflect.ClassTag[U]):org.apache.spark.rdd.RDD[(T,U)]"></a>
+      <a id="zip[U](other:org.apache.spark.rdd.RDD[U])(implicitevidence$13:scala.reflect.ClassTag[U]):org.apache.spark.rdd.RDD[(T,U)]"></a>
       <a id="zip[U](RDD[U])(ClassTag[U]):RDD[(V,U)]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1664,7 +1687,7 @@ can operate naturally inside the lazy-transform formalism
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RDD</dd></dl></div>
     </li><li name="org.apache.spark.rdd.RDD#zipPartitions" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="zipPartitions[B&lt;:&lt;?&gt;,C&lt;:&lt;?&gt;,D&lt;:&lt;?&gt;,V&lt;:&lt;?&gt;](rdd2:&lt;?&gt;,rdd3:&lt;?&gt;,rdd4:&lt;?&gt;)(f:&lt;?&gt;)(implicitevidence$27:&lt;?&gt;,implicitevidence$28:&lt;?&gt;,implicitevidence$29:&lt;?&gt;,implicitevidence$30:&lt;?&gt;):org.apache.spark.rdd.RDD[V]"></a>
+      <a id="zipPartitions[B&lt;:&lt;?&gt;,C&lt;:&lt;?&gt;,D&lt;:&lt;?&gt;,V&lt;:&lt;?&gt;](rdd2:&lt;?&gt;,rdd3:&lt;?&gt;,rdd4:&lt;?&gt;)(f:&lt;?&gt;)(implicitevidence$28:&lt;?&gt;,implicitevidence$29:&lt;?&gt;,implicitevidence$30:&lt;?&gt;,implicitevidence$31:&lt;?&gt;):org.apache.spark.rdd.RDD[V]"></a>
       <a id="zipPartitions[B,C,D,V](RDD[B],RDD[C],RDD[D])((Iterator[V],Iterator[B],Iterator[C],Iterator[D])⇒Iterator[V])(ClassTag[B],ClassTag[C],ClassTag[D],ClassTag[V]):RDD[V]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1677,7 +1700,7 @@ can operate naturally inside the lazy-transform formalism
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RDD</dd></dl></div>
     </li><li name="org.apache.spark.rdd.RDD#zipPartitions" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="zipPartitions[B&lt;:&lt;?&gt;,C&lt;:&lt;?&gt;,D&lt;:&lt;?&gt;,V&lt;:&lt;?&gt;](rdd2:&lt;?&gt;,rdd3:&lt;?&gt;,rdd4:&lt;?&gt;,preservesPartitioning:&lt;?&gt;)(f:&lt;?&gt;)(implicitevidence$23:&lt;?&gt;,implicitevidence$24:&lt;?&gt;,implicitevidence$25:&lt;?&gt;,implicitevidence$26:&lt;?&gt;):org.apache.spark.rdd.RDD[V]"></a>
+      <a id="zipPartitions[B&lt;:&lt;?&gt;,C&lt;:&lt;?&gt;,D&lt;:&lt;?&gt;,V&lt;:&lt;?&gt;](rdd2:&lt;?&gt;,rdd3:&lt;?&gt;,rdd4:&lt;?&gt;,preservesPartitioning:&lt;?&gt;)(f:&lt;?&gt;)(implicitevidence$24:&lt;?&gt;,implicitevidence$25:&lt;?&gt;,implicitevidence$26:&lt;?&gt;,implicitevidence$27:&lt;?&gt;):org.apache.spark.rdd.RDD[V]"></a>
       <a id="zipPartitions[B,C,D,V](RDD[B],RDD[C],RDD[D],Boolean)((Iterator[V],Iterator[B],Iterator[C],Iterator[D])⇒Iterator[V])(ClassTag[B],ClassTag[C],ClassTag[D],ClassTag[V]):RDD[V]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1690,7 +1713,7 @@ can operate naturally inside the lazy-transform formalism
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RDD</dd></dl></div>
     </li><li name="org.apache.spark.rdd.RDD#zipPartitions" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="zipPartitions[B&lt;:&lt;?&gt;,C&lt;:&lt;?&gt;,V&lt;:&lt;?&gt;](rdd2:&lt;?&gt;,rdd3:&lt;?&gt;)(f:&lt;?&gt;)(implicitevidence$20:&lt;?&gt;,implicitevidence$21:&lt;?&gt;,implicitevidence$22:&lt;?&gt;):org.apache.spark.rdd.RDD[V]"></a>
+      <a id="zipPartitions[B&lt;:&lt;?&gt;,C&lt;:&lt;?&gt;,V&lt;:&lt;?&gt;](rdd2:&lt;?&gt;,rdd3:&lt;?&gt;)(f:&lt;?&gt;)(implicitevidence$21:&lt;?&gt;,implicitevidence$22:&lt;?&gt;,implicitevidence$23:&lt;?&gt;):org.apache.spark.rdd.RDD[V]"></a>
       <a id="zipPartitions[B,C,V](RDD[B],RDD[C])((Iterator[V],Iterator[B],Iterator[C])⇒Iterator[V])(ClassTag[B],ClassTag[C],ClassTag[V]):RDD[V]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1703,7 +1726,7 @@ can operate naturally inside the lazy-transform formalism
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RDD</dd></dl></div>
     </li><li name="org.apache.spark.rdd.RDD#zipPartitions" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="zipPartitions[B&lt;:&lt;?&gt;,C&lt;:&lt;?&gt;,V&lt;:&lt;?&gt;](rdd2:&lt;?&gt;,rdd3:&lt;?&gt;,preservesPartitioning:&lt;?&gt;)(f:&lt;?&gt;)(implicitevidence$17:&lt;?&gt;,implicitevidence$18:&lt;?&gt;,implicitevidence$19:&lt;?&gt;):org.apache.spark.rdd.RDD[V]"></a>
+      <a id="zipPartitions[B&lt;:&lt;?&gt;,C&lt;:&lt;?&gt;,V&lt;:&lt;?&gt;](rdd2:&lt;?&gt;,rdd3:&lt;?&gt;,preservesPartitioning:&lt;?&gt;)(f:&lt;?&gt;)(implicitevidence$18:&lt;?&gt;,implicitevidence$19:&lt;?&gt;,implicitevidence$20:&lt;?&gt;):org.apache.spark.rdd.RDD[V]"></a>
       <a id="zipPartitions[B,C,V](RDD[B],RDD[C],Boolean)((Iterator[V],Iterator[B],Iterator[C])⇒Iterator[V])(ClassTag[B],ClassTag[C],ClassTag[V]):RDD[V]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1716,7 +1739,7 @@ can operate naturally inside the lazy-transform formalism
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RDD</dd></dl></div>
     </li><li name="org.apache.spark.rdd.RDD#zipPartitions" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="zipPartitions[B&lt;:&lt;?&gt;,V&lt;:&lt;?&gt;](rdd2:&lt;?&gt;)(f:&lt;?&gt;)(implicitevidence$15:&lt;?&gt;,implicitevidence$16:&lt;?&gt;):org.apache.spark.rdd.RDD[V]"></a>
+      <a id="zipPartitions[B&lt;:&lt;?&gt;,V&lt;:&lt;?&gt;](rdd2:&lt;?&gt;)(f:&lt;?&gt;)(implicitevidence$16:&lt;?&gt;,implicitevidence$17:&lt;?&gt;):org.apache.spark.rdd.RDD[V]"></a>
       <a id="zipPartitions[B,V](RDD[B])((Iterator[V],Iterator[B])⇒Iterator[V])(ClassTag[B],ClassTag[V]):RDD[V]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1729,7 +1752,7 @@ can operate naturally inside the lazy-transform formalism
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RDD</dd></dl></div>
     </li><li name="org.apache.spark.rdd.RDD#zipPartitions" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="zipPartitions[B&lt;:&lt;?&gt;,V&lt;:&lt;?&gt;](rdd2:&lt;?&gt;,preservesPartitioning:&lt;?&gt;)(f:&lt;?&gt;)(implicitevidence$13:&lt;?&gt;,implicitevidence$14:&lt;?&gt;):org.apache.spark.rdd.RDD[V]"></a>
+      <a id="zipPartitions[B&lt;:&lt;?&gt;,V&lt;:&lt;?&gt;](rdd2:&lt;?&gt;,preservesPartitioning:&lt;?&gt;)(f:&lt;?&gt;)(implicitevidence$14:&lt;?&gt;,implicitevidence$15:&lt;?&gt;):org.apache.spark.rdd.RDD[V]"></a>
       <a id="zipPartitions[B,V](RDD[B],Boolean)((Iterator[V],Iterator[B])⇒Iterator[V])(ClassTag[B],ClassTag[V]):RDD[V]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1791,7 +1814,7 @@ can operate naturally inside the lazy-transform formalism
               
         </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.0.0)</i> use mapPartitionsWithIndex and filter</p></dd></dl></div>
     </li><li name="org.apache.spark.rdd.RDD#flatMapWith" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="flatMapWith[A&lt;:&lt;?&gt;,U&lt;:&lt;?&gt;](constructA:&lt;?&gt;,preservesPartitioning:&lt;?&gt;)(f:&lt;?&gt;)(implicitevidence$11:&lt;?&gt;):org.apache.spark.rdd.RDD[U]"></a>
+      <a id="flatMapWith[A&lt;:&lt;?&gt;,U&lt;:&lt;?&gt;](constructA:&lt;?&gt;,preservesPartitioning:&lt;?&gt;)(f:&lt;?&gt;)(implicitevidence$12:&lt;?&gt;):org.apache.spark.rdd.RDD[U]"></a>
       <a id="flatMapWith[A,U]((Int)⇒A,Boolean)((V,A)⇒Seq[U])(ClassTag[U]):RDD[U]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1823,7 +1846,7 @@ can operate naturally inside the lazy-transform formalism
               
         </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.0.0)</i> use mapPartitionsWithIndex and foreach</p></dd></dl></div>
     </li><li name="org.apache.spark.rdd.RDD#mapPartitionsWithContext" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="mapPartitionsWithContext[U&lt;:&lt;?&gt;](f:&lt;?&gt;,preservesPartitioning:&lt;?&gt;)(implicitevidence$8:&lt;?&gt;):org.apache.spark.rdd.RDD[U]"></a>
+      <a id="mapPartitionsWithContext[U&lt;:&lt;?&gt;](f:&lt;?&gt;,preservesPartitioning:&lt;?&gt;)(implicitevidence$9:&lt;?&gt;):org.apache.spark.rdd.RDD[U]"></a>
       <a id="mapPartitionsWithContext[U]((TaskContext,Iterator[V])⇒Iterator[U],Boolean)(ClassTag[U]):RDD[U]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1841,7 +1864,7 @@ can operate naturally inside the lazy-transform formalism
               
         </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.2.0)</i> use TaskContext.get</p></dd></dl></div>
     </li><li name="org.apache.spark.rdd.RDD#mapPartitionsWithSplit" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="mapPartitionsWithSplit[U&lt;:&lt;?&gt;](f:&lt;?&gt;,preservesPartitioning:&lt;?&gt;)(implicitevidence$9:&lt;?&gt;):org.apache.spark.rdd.RDD[U]"></a>
+      <a id="mapPartitionsWithSplit[U&lt;:&lt;?&gt;](f:&lt;?&gt;,preservesPartitioning:&lt;?&gt;)(implicitevidence$10:&lt;?&gt;):org.apache.spark.rdd.RDD[U]"></a>
       <a id="mapPartitionsWithSplit[U]((Int,Iterator[V])⇒Iterator[U],Boolean)(ClassTag[U]):RDD[U]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1857,7 +1880,7 @@ can operate naturally inside the lazy-transform formalism
               
         </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 0.7.0)</i> use mapPartitionsWithIndex</p></dd></dl></div>
     </li><li name="org.apache.spark.rdd.RDD#mapWith" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="mapWith[A&lt;:&lt;?&gt;,U&lt;:&lt;?&gt;](constructA:&lt;?&gt;,preservesPartitioning:&lt;?&gt;)(f:&lt;?&gt;)(implicitevidence$10:&lt;?&gt;):org.apache.spark.rdd.RDD[U]"></a>
+      <a id="mapWith[A&lt;:&lt;?&gt;,U&lt;:&lt;?&gt;](constructA:&lt;?&gt;,preservesPartitioning:&lt;?&gt;)(f:&lt;?&gt;)(implicitevidence$11:&lt;?&gt;):org.apache.spark.rdd.RDD[U]"></a>
       <a id="mapWith[A,U]((Int)⇒A,Boolean)((V,A)⇒U)(ClassTag[U]):RDD[U]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
