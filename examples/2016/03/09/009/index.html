@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
 
-    <title>Ivy coordinates</title>
+    <title>Silex 0.0.9</title>
     
     <meta name="author" content="William Benton and others">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -53,7 +53,7 @@
     
       
       	
-      	<li class="active"><a href="/coordinates/" class="active">Ivy coordinates</a></li>
+      	<li><a href="/coordinates/">Ivy coordinates</a></li>
       	
       
     
@@ -72,20 +72,32 @@
     <div class="container">
       
 <div class="page-header">
-  <h1>Ivy coordinates </h1>
+  <h1>Silex 0.0.9 </h1>
 </div>
 
-<div class="row">
-  <div class="col-xs-12">
-      <p>To use Silex in your own projects, add the following resolver to your <code>build.sbt</code>:</p>
+<div class="row post-full">
+  <div class="col-md-12">
+    <div class="date">
+      <span>09 March 2016</span>
+    </div>
+    <div class="content">
+      <p>Silex 0.0.9 is now released!  The main feature is that Silex now supports (and is built for) Scala 2.11.  We will continue to support Scala 2.10 as long as it is feasible to do so.  We have also integrated some improvements to our continuous integration that should lead to more reliable code overall.</p>
 
-<figure class="highlight"><pre><code class="language-scala" data-lang="scala"><span class="n">resolvers</span> <span class="o">+=</span> <span class="s">&quot;Will&#39;s bintray&quot;</span> <span class="n">at</span> <span class="s">&quot;https://dl.bintray.com/willb/maven/&quot;</span></code></pre></figure>
+<p>In case you missed the improvements in Silex 0.0.8, here they are:</p>
 
-<p>and then add Silex as a dependency:</p>
+<ul>
+  <li>support Spark 1.6 and eliminate some deprecation warnings related to Spark 1.6</li>
+  <li>support for loading a directory of serialized data frames</li>
+  <li><code>VectorID</code> class for extending MLlib vectors with identifiers</li>
+  <li>lazy <code>scan</code> and <code>scanLeft</code> for RDDs</li>
+  <li>improved feature extraction support</li>
+  <li>basic tokenizers for machine-generated English</li>
+  <li><code>ApproximateWhitelist</code> for filtering natural-language text</li>
+</ul>
 
-<figure class="highlight"><pre><code class="language-scala" data-lang="scala"><span class="n">libraryDependencies</span> <span class="o">+=</span> <span class="s">&quot;com.redhat.et&quot;</span> <span class="o">%%</span> <span class="s">&quot;silex&quot;</span> <span class="o">%</span> <span class="s">&quot;0.0.9&quot;</span></code></pre></figure>
+    </div>
 
-
+    
   </div>
 </div>
 
