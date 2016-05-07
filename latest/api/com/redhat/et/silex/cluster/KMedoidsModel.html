@@ -440,6 +440,54 @@ Defaults to false.</p></dd><dt>returns</dt><dd class="cmt"><p>The sum of closest
 </p><div class="fullcomment"><div class="comment cmt"><p>Return the index of the medoid closest to the input
 </p></div><dl class="paramcmts block"><dt class="param">point</dt><dd class="cmt"><p>An element of the data space</p></dd><dt>returns</dt><dd class="cmt"><p>The index of the medoid closest to the input
 </p></dd></dl></div>
+    </li><li name="com.redhat.et.silex.cluster.KMedoidsModel#predictBy" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="predictBy[O,V](obj:O)(f:O=&gt;(T,V)):(Int,V)"></a>
+      <a id="predictBy[O,V](O)((O)⇒(T,V)):(Int,V)"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">predictBy</span><span class="tparams">[<span name="O">O</span>, <span name="V">V</span>]</span><span class="params">(<span name="obj">obj: <span class="extype" name="com.redhat.et.silex.cluster.KMedoidsModel.predictBy.O">O</span></span>)</span><span class="params">(<span name="f">f: (<span class="extype" name="com.redhat.et.silex.cluster.KMedoidsModel.predictBy.O">O</span>) ⇒ (<span class="extype" name="com.redhat.et.silex.cluster.KMedoidsModel.T">T</span>, <span class="extype" name="com.redhat.et.silex.cluster.KMedoidsModel.predictBy.V">V</span>)</span>)</span><span class="result">: (<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="com.redhat.et.silex.cluster.KMedoidsModel.predictBy.V">V</span>)</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Extracts a data object and a tag value from another data structure, and returns the
+index of closest cluster, paired with the tag value</p><div class="fullcomment"><div class="comment cmt"><p>Extracts a data object and a tag value from another data structure, and returns the
+index of closest cluster, paired with the tag value</p></div><dl class="paramcmts block"><dt class="param">obj</dt><dd class="cmt"><p>An object containing a data point and an associated tag value</p></dd><dt class="param">f</dt><dd class="cmt"><p>Function to extract data point and the tag value from 'obj'</p></dd><dt>returns</dt><dd class="cmt"><p>A pair value (j, v) where (j) is index of closest cluster and (v) is the associated
+tag value
+</p></dd></dl></div>
+    </li><li name="com.redhat.et.silex.cluster.KMedoidsModel#predictWithDistance" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="predictWithDistance(point:T):(Int,Double)"></a>
+      <a id="predictWithDistance(T):(Int,Double)"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">predictWithDistance</span><span class="params">(<span name="point">point: <span class="extype" name="com.redhat.et.silex.cluster.KMedoidsModel.T">T</span></span>)</span><span class="result">: (<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Double">Double</span>)</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns the index of closest cluster, paired with corresponding distance</p><div class="fullcomment"><div class="comment cmt"><p>Returns the index of closest cluster, paired with corresponding distance</p></div><dl class="paramcmts block"><dt class="param">point</dt><dd class="cmt"><p>A data object</p></dd><dt>returns</dt><dd class="cmt"><p>Pair (j, d) with (j) the closest cluster index and (d) the corresponding distance
+</p></dd></dl></div>
+    </li><li name="com.redhat.et.silex.cluster.KMedoidsModel#predictWithDistanceBy" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="predictWithDistanceBy[O,V](obj:O)(f:O=&gt;(T,V)):(Int,Double,V)"></a>
+      <a id="predictWithDistanceBy[O,V](O)((O)⇒(T,V)):(Int,Double,V)"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">predictWithDistanceBy</span><span class="tparams">[<span name="O">O</span>, <span name="V">V</span>]</span><span class="params">(<span name="obj">obj: <span class="extype" name="com.redhat.et.silex.cluster.KMedoidsModel.predictWithDistanceBy.O">O</span></span>)</span><span class="params">(<span name="f">f: (<span class="extype" name="com.redhat.et.silex.cluster.KMedoidsModel.predictWithDistanceBy.O">O</span>) ⇒ (<span class="extype" name="com.redhat.et.silex.cluster.KMedoidsModel.T">T</span>, <span class="extype" name="com.redhat.et.silex.cluster.KMedoidsModel.predictWithDistanceBy.V">V</span>)</span>)</span><span class="result">: (<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="com.redhat.et.silex.cluster.KMedoidsModel.predictWithDistanceBy.V">V</span>)</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Extracts a data object and a tag value from another data structure, and returns the
+index of closest cluster, with the corresponding distance and associated tag value</p><div class="fullcomment"><div class="comment cmt"><p>Extracts a data object and a tag value from another data structure, and returns the
+index of closest cluster, with the corresponding distance and associated tag value</p></div><dl class="paramcmts block"><dt class="param">obj</dt><dd class="cmt"><p>An object containing a data point and an associated tag value</p></dd><dt class="param">f</dt><dd class="cmt"><p>Function to extract data point and tag value from 'obj'</p></dd><dt>returns</dt><dd class="cmt"><p>A tuple (j, d, v) where (j) is index of closest cluster, (d) is corresponding
+distance, and (v) is the associated tag value
+</p></dd></dl></div>
     </li><li name="com.redhat.et.silex.cluster.KMedoidsModel#predictor" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="predictor:T=&gt;Int"></a>
       <a id="predictor:(T)⇒Int"></a>
@@ -453,6 +501,19 @@ Defaults to false.</p></dd><dt>returns</dt><dd class="cmt"><p>The sum of closest
       </span>
       </h4>
       <p class="shortcomment cmt">The model prediction function: maps an element to the index of the closest medoid</p>
+    </li><li name="com.redhat.et.silex.cluster.KMedoidsModel#predictorWithDistance" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="predictorWithDistance:T=&gt;(Int,Double)"></a>
+      <a id="predictorWithDistance:(T)⇒(Int,Double)"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">lazy val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">predictorWithDistance</span><span class="result">: (<span class="extype" name="com.redhat.et.silex.cluster.KMedoidsModel.T">T</span>) ⇒ (<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Double">Double</span>)</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns index of closest medoid, paired with its distance to that medoid</p>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>

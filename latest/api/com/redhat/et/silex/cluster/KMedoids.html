@@ -41,7 +41,8 @@
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>An object for training a K-Medoid clustering model on Seq or RDD data.</p><p>Data is required to have a metric function defined on it, but it does not require an algebra
 over data elements, as K-Means clustering does.
-</p></div><dl class="paramcmts block"><dt class="param">metric</dt><dd class="cmt"><p>The distance metric imposed on data elements</p></dd><dt class="param">k</dt><dd class="cmt"><p>The number of clusters to use</p></dd><dt class="param">maxIterations</dt><dd class="cmt"><p>The maximum number of model refinement iterations to run</p></dd><dt class="param">epsilon</dt><dd class="cmt"><p>The epsilon threshold to use.  Must be &gt;= 0.</p><p>If c1 is the current clustering model cost, and c0 is the cost of the previous model,
+</p></div><dl class="paramcmts block"><dt class="param">metric</dt><dd class="cmt"><p>The distance metric imposed on data elements</p></dd><dt class="param">k</dt><dd class="cmt"><p>The number of clusters to use.  If k is zero, the clustering will attempt to
+identify a number of clusters that is &quot;good&quot; w.r.t. Minimum Description Length.</p></dd><dt class="param">maxIterations</dt><dd class="cmt"><p>The maximum number of model refinement iterations to run</p></dd><dt class="param">epsilon</dt><dd class="cmt"><p>The epsilon threshold to use.  Must be &gt;= 0.</p><p>If c1 is the current clustering model cost, and c0 is the cost of the previous model,
 then refinement halts when (c0 - c1) &lt;= epsilon (Lower cost is better).</p></dd><dt class="param">fractionEpsilon</dt><dd class="cmt"><p>The fractionEpsilon threshold to use.  Must be &gt;= 0.</p><p>If c1 is the current clustering model cost, and c0 is the cost of the previous model,
 then refinement halts when (c0 - c1) / c0 &lt;= fractionEpsilon (Lower cost is better).</p></dd><dt class="param">sampleSize</dt><dd class="cmt"><p>The target size of the random sample.  Must be &gt; 0.</p></dd><dt class="param">numThreads</dt><dd class="cmt"><p>The number of threads to use while clustering</p></dd><dt class="param">seed</dt><dd class="cmt"><p>The random seed to use for RNG.</p><p>Cluster training runs with the same starting random seed will be the same.  By default,
 training runs will vary randomly.
@@ -97,7 +98,8 @@ training runs will vary randomly.
         <span class="name">KMedoids</span><span class="params">(<span name="metric">metric: (<span class="extype" name="com.redhat.et.silex.cluster.KMedoids.T">T</span>, <span class="extype" name="com.redhat.et.silex.cluster.KMedoids.T">T</span>) ⇒ <span class="extype" name="scala.Double">Double</span></span>, <span name="k">k: <span class="extype" name="scala.Int">Int</span></span>, <span name="maxIterations">maxIterations: <span class="extype" name="scala.Int">Int</span></span>, <span name="epsilon">epsilon: <span class="extype" name="scala.Double">Double</span></span>, <span name="fractionEpsilon">fractionEpsilon: <span class="extype" name="scala.Double">Double</span></span>, <span name="sampleSize">sampleSize: <span class="extype" name="scala.Int">Int</span></span>, <span name="numThreads">numThreads: <span class="extype" name="scala.Int">Int</span></span>, <span name="seed">seed: <span class="extype" name="scala.Long">Long</span></span>)</span>
       </span>
       </h4>
-      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">metric</dt><dd class="cmt"><p>The distance metric imposed on data elements</p></dd><dt class="param">k</dt><dd class="cmt"><p>The number of clusters to use</p></dd><dt class="param">maxIterations</dt><dd class="cmt"><p>The maximum number of model refinement iterations to run</p></dd><dt class="param">epsilon</dt><dd class="cmt"><p>The epsilon threshold to use.  Must be &gt;= 0.</p><p>If c1 is the current clustering model cost, and c0 is the cost of the previous model,
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">metric</dt><dd class="cmt"><p>The distance metric imposed on data elements</p></dd><dt class="param">k</dt><dd class="cmt"><p>The number of clusters to use.  If k is zero, the clustering will attempt to
+identify a number of clusters that is &quot;good&quot; w.r.t. Minimum Description Length.</p></dd><dt class="param">maxIterations</dt><dd class="cmt"><p>The maximum number of model refinement iterations to run</p></dd><dt class="param">epsilon</dt><dd class="cmt"><p>The epsilon threshold to use.  Must be &gt;= 0.</p><p>If c1 is the current clustering model cost, and c0 is the cost of the previous model,
 then refinement halts when (c0 - c1) &lt;= epsilon (Lower cost is better).</p></dd><dt class="param">fractionEpsilon</dt><dd class="cmt"><p>The fractionEpsilon threshold to use.  Must be &gt;= 0.</p><p>If c1 is the current clustering model cost, and c0 is the cost of the previous model,
 then refinement halts when (c0 - c1) / c0 &lt;= fractionEpsilon (Lower cost is better).</p></dd><dt class="param">sampleSize</dt><dd class="cmt"><p>The target size of the random sample.  Must be &gt; 0.</p></dd><dt class="param">numThreads</dt><dd class="cmt"><p>The number of threads to use while clustering</p></dd><dt class="param">seed</dt><dd class="cmt"><p>The random seed to use for RNG.</p><p>Cluster training runs with the same starting random seed will be the same.  By default,
 training runs will vary randomly.
@@ -307,7 +309,7 @@ then refinement halts when (c0 - c1) / c0 &lt;= fractionEpsilon (Lower cost is b
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
-    </li><li name="com.redhat.et.silex.cluster.KMedoids#k" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="com.redhat.et.silex.cluster.KMedoids#k" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="k:Int"></a>
       <a id="k:Int"></a>
       <h4 class="signature">
@@ -319,7 +321,8 @@ then refinement halts when (c0 - c1) / c0 &lt;= fractionEpsilon (Lower cost is b
         <span class="name">k</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">The number of clusters to use</p>
+      <p class="shortcomment cmt">The number of clusters to use.</p><div class="fullcomment"><div class="comment cmt"><p>The number of clusters to use.  If k is zero, the clustering will attempt to
+identify a number of clusters that is &quot;good&quot; w.r.t. Minimum Description Length.</p></div></div>
     </li><li name="org.apache.spark.Logging#log" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="log:org.slf4j.Logger"></a>
       <a id="log:Logger"></a>
@@ -659,7 +662,8 @@ then refinement halts when (c0 - c1) / c0 &lt;= fractionEpsilon (Lower cost is b
       </h4>
       <p class="shortcomment cmt">Set the number of clusters to train
 </p><div class="fullcomment"><div class="comment cmt"><p>Set the number of clusters to train
-</p></div><dl class="paramcmts block"><dt class="param">k_</dt><dd class="cmt"><p>The number of clusters.  Must be &gt; 0.</p></dd><dt>returns</dt><dd class="cmt"><p>Copy of this instance with new value for k
+</p></div><dl class="paramcmts block"><dt class="param">k_</dt><dd class="cmt"><p>The number of clusters.  Must be &gt;= 0.  If k is zero, the clustering will
+attempt to identify a number of clusters that is &quot;good&quot; w.r.t. Minimum Description Length.</p></dd><dt>returns</dt><dd class="cmt"><p>Copy of this instance with new value for k
 </p></dd></dl></div>
     </li><li name="com.redhat.et.silex.cluster.KMedoids#setMaxIterations" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="setMaxIterations(maxIterations_:Int):com.redhat.et.silex.cluster.KMedoids[T]"></a>

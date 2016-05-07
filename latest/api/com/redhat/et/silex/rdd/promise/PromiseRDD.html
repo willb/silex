@@ -1214,7 +1214,7 @@ can operate naturally inside the lazy-transform formalism
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RDD</dd></dl></div>
     </li><li name="org.apache.spark.rdd.RDD#persist" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="persist(newLevel:&lt;?&gt;):RDD.this.type"></a>
+      <a id="persist(newLevel:org.apache.spark.storage.StorageLevel):RDD.this.type"></a>
       <a id="persist(StorageLevel):PromiseRDD.this.type"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1565,7 +1565,7 @@ can operate naturally inside the lazy-transform formalism
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RDD</dd></dl></div>
     </li><li name="org.apache.spark.rdd.RDD#treeAggregate" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="treeAggregate[U&lt;:&lt;?&gt;](zeroValue:&lt;?&gt;)(seqOp:&lt;?&gt;,combOp:&lt;?&gt;,depth:&lt;?&gt;)(implicitevidence$34:&lt;?&gt;):U"></a>
+      <a id="treeAggregate[U](zeroValue:U)(seqOp:(U,T)=&gt;U,combOp:(U,U)=&gt;U,depth:Int)(implicitevidence$34:scala.reflect.ClassTag[U]):U"></a>
       <a id="treeAggregate[U](U)((U,V)⇒U,(U,U)⇒U,Int)(ClassTag[U]):U"></a>
       <h4 class="signature">
       <span class="modifier_kind">
