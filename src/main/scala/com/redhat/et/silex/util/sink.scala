@@ -24,7 +24,7 @@ package com.redhat.et.silex.util
  * On-line mean and variance estimates for a stream of Double values.
  * Uses Chan's formulae.
 */
-sealed class SampleSink(private var _count: Long, private var _min: Double, private var _max: Double, private var _mean: Double, private var _m2: Double) {
+sealed class StreamMoments(private var _count: Long, private var _min: Double, private var _max: Double, private var _mean: Double, private var _m2: Double) {
   // TODO:  parameterize this over sample (at least), fractional (mean/variance), and integral (count) types
   
   @inline def put(sample: Double) = {
@@ -36,12 +36,12 @@ sealed class SampleSink(private var _count: Long, private var _min: Double, priv
     _max = math.max(_max, sample)
   }
   
-  def ++(other: SampleSink): SampleSink = {
-    val result = SampleSink.empty += this
+  def ++(other: StreamMoments): StreamMoments = {
+    val result = StreamMoments.empty += this
     result += other
   }
 
-  def +=(other: SampleSink): SampleSink = {
+  def +=(other: StreamMoments): StreamMoments = {
     if(other.count == 0L) {
       this
     } else if (this.count == 0L) {
@@ -77,6 +77,6 @@ sealed class SampleSink(private var _count: Long, private var _min: Double, priv
   override def toString = s"SampleSink(count=$count, min=$min, max=$max, mean=$mean, variance=$variance)"
 }
 
-object SampleSink {
-  def empty: SampleSink = new SampleSink(0, Double.PositiveInfinity, Double.NegativeInfinity, 0.0d, 0.0d)
+object StreamMoments {
+  def empty: StreamMoments = new StreamMoments(0, Double.PositiveInfinity, Double.NegativeInfinity, 0.0d, 0.0d)
 }
