@@ -20,7 +20,7 @@
 
 package com.redhat.et.silex.som
 
-import com.redhat.et.silex.util.StreamMoments
+import com.redhat.et.silex.util.{StreamMoments, ImmutableStreamMoments}
 
 import breeze.linalg._
 import breeze.numerics._
@@ -72,6 +72,12 @@ class SOM(val xdim: Int, val ydim: Int, val fdim: Int, _entries: DenseVector[Den
   def closestWithSimilarity(example: SV, exampleNorm: Option[Double]): (Int, Double) = {
     closestWithSimilarity(SOM.spark2breeze(example), exampleNorm)
   }
+  
+  private [som] def freeze: ImmutableSOM = ImmutableSOM(xdim, ydim, fdim, entries.map(_.toArray).toArray, mqsink.freeze)
+}
+
+private[som] case class ImmutableSOM(val xdim: Int, val ydim: Int, val fdim: Int, val entries: Array[Array[Double]], val moments: ImmutableStreamMoments) {
+  def toSOM: SOM = new SOM(xdim, ydim, fdim, DenseVector(entries.map(DenseVector(_))), StreamMoments.fromFrozen(moments))
 }
 
 object SOM {
@@ -79,26 +85,34 @@ object SOM {
   import org.apache.spark.rdd.RDD
   import org.apache.spark.mllib.linalg.{Vector=>SV, DenseVector=>SDV, SparseVector=>SSV}
 
-  import com.esotericsoftware.kryo.Kryo
-  import com.esotericsoftware.kryo.io.{Input, Output}
-  import org.objenesis.strategy.StdInstantiatorStrategy
   import scala.util.Try
+  
+  import org.json4s._
+  import org.json4s.jackson.Serialization
+  import org.json4s.jackson.Serialization.{read=>jread, write=>jwrite}
+  
+  implicit val formats = Serialization.formats(NoTypeHints)
+  
+  def toJson(som: SOM): String = {
+    jwrite(som.freeze)
+  }
+  
+  def fromJson(json: String): Try[SOM] = {
+    Try({ 
+      jread[ImmutableSOM](json).toSOM 
+    })
+  }
 
   def save(som: SOM, path: String): Try[Unit] = {
     Try({
-      val k = new Kryo()
-      val out = new Output(new java.io.FileOutputStream(path))
-      k.writeClassAndObject(out, som)
+      jwrite(som.freeze, new java.io.FileWriter(path))
       ()
     })
   }
 
   def load(path: String): Try[SOM] = {
     Try({
-      val k = new Kryo()
-      val input = new Input(new java.io.FileInputStream(path))
-      k.setInstantiatorStrategy(new StdInstantiatorStrategy())
-      k.readClassAndObject(input).asInstanceOf[SOM]
+      jread[ImmutableSOM](new java.io.FileReader(path)).toSOM
     })
   }
 

@@ -24,10 +24,10 @@ package com.redhat.et.silex.util
  * On-line mean and variance estimates for a stream of Double values.
  * Uses Chan's formulae.
 */
-sealed class StreamMoments(private var _count: Long, private var _min: Double, private var _max: Double, private var _mean: Double, private var _m2: Double) {
+sealed class StreamMoments(private var _count: Long, private var _min: Double, private var _max: Double, private var _mean: Double, private var _m2: Double) extends java.io.Serializable {
   // TODO:  parameterize this over sample (at least), fractional (mean/variance), and integral (count) types
   
-  @inline def put(sample: Double) = {
+  @inline def put(sample: Double) {
     val dev = sample - _mean
     _mean = _mean + (dev / (count + 1))
     _m2 = _m2 + (dev * dev) * count / (count + 1)
@@ -75,8 +75,16 @@ sealed class StreamMoments(private var _count: Long, private var _min: Double, p
   def stddev = math.sqrt(variance)
   
   override def toString = s"SampleSink(count=$count, min=$min, max=$max, mean=$mean, variance=$variance)"
+
+  private [silex] def freeze: ImmutableStreamMoments = ImmutableStreamMoments(count, min, max, mean, _m2)
+}
+
+private[silex] case class ImmutableStreamMoments(var count: Long, var min: Double, var max: Double, var m1: Double, var m2: Double) {
+  val mean = m1
+  val variance = m2 / count
 }
 
 object StreamMoments {
   def empty: StreamMoments = new StreamMoments(0, Double.PositiveInfinity, Double.NegativeInfinity, 0.0d, 0.0d)
+  private[silex] def fromFrozen(i: ImmutableStreamMoments): StreamMoments = new StreamMoments(i.count, i.min, i.max, i.m1, i.m2)
 }
