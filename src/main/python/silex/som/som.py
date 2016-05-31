@@ -17,9 +17,21 @@
 # limitations under the License.
 
 
+import json
+from sys import float_info
+
+import numpy
 
 def fromJSON(file):
-  pass
+  with open(file) as f:
+    struct = json.load(f)
+    keys = [struct["moments"][key] for key in ["count", "min", "max", "m1", "m2"]]
+    moments = StreamMoments(*keys)
+    fdim = struct["fdim"]
+    ydim = struct["ydim"]
+    xdim = struct["xdim"]
+    entries = [e for e in struct["entries"]]
+    return SOM(xdim, ydim, fdim, entries, moments)
 
 class StreamMoments(object):
   from sys import float_info
@@ -49,12 +61,21 @@ class StreamMoments(object):
     return math.sqrt(self.variance)
 
 class SOM(object):
-  def __init__(self, xdim=0, ydim=0, fdim=0, entries=0, mqsink=None):
+  def __init__(self, xdim=0, ydim=0, fdim=0, entries=[], mqsink=None):
     self.xdim = xdim
     self.ydim = ydim
     self.fdim = fdim
-    self.entries = entries
+    self.entries = numpy.array(entries)
     self.mqsink = mqsink
   
   def closestWithSimilarity(self, example):
-    pass
+    def cossim(u, v):
+      return min(1.0, max(0.0, numpy.dot(u, v) / (numpy.linalg.norm(u) * numpy.linalg.norm(v))))
+    best = (0, 0.0)
+    i = 0
+    for arr in self.entries:
+      sim = cossim(example, arr)
+      if sim > best[1]:
+        best = (i, sim)
+      i += 1
+    return best
