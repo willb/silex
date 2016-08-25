@@ -35,7 +35,7 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <span class="name">RandomForestCluster</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="extractor">extractor: (<span class="extype" name="com.redhat.et.silex.cluster.RandomForestCluster.T">T</span>) ⇒ <a href="../../../../../scala/package.html#Seq[+A]=Seq[A]" class="extmbr" name="scala.Seq">Seq</a>[<span class="extype" name="scala.Double">Double</span>]</span>, <span name="categoryInfo">categoryInfo: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>]</span>, <span name="syntheticSS">syntheticSS: <span class="extype" name="scala.Int">Int</span></span>, <span name="rfNumTrees">rfNumTrees: <span class="extype" name="scala.Int">Int</span></span>, <span name="rfMaxDepth">rfMaxDepth: <span class="extype" name="scala.Int">Int</span></span>, <span name="rfMaxBins">rfMaxBins: <span class="extype" name="scala.Int">Int</span></span>, <span name="clusterK">clusterK: <span class="extype" name="scala.Int">Int</span></span>, <span name="clusterMaxIter">clusterMaxIter: <span class="extype" name="scala.Int">Int</span></span>, <span name="clusterEps">clusterEps: <span class="extype" name="scala.Double">Double</span></span>, <span name="clusterFractionEps">clusterFractionEps: <span class="extype" name="scala.Double">Double</span></span>, <span name="clusterSS">clusterSS: <span class="extype" name="scala.Int">Int</span></span>, <span name="clusterThreads">clusterThreads: <span class="extype" name="scala.Int">Int</span></span>, <span name="seed">seed: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span> with <span class="extype" name="org.apache.spark.Logging">Logging</span> with <span class="extype" name="scala.Product">Product</span></span>
+        <span class="name">RandomForestCluster</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="extractor">extractor: (<span class="extype" name="com.redhat.et.silex.cluster.RandomForestCluster.T">T</span>) ⇒ <a href="../../../../../scala/package.html#Seq[+A]=Seq[A]" class="extmbr" name="scala.Seq">Seq</a>[<span class="extype" name="scala.Double">Double</span>]</span>, <span name="categoryInfo">categoryInfo: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>]</span>, <span name="syntheticSS">syntheticSS: <span class="extype" name="scala.Int">Int</span></span>, <span name="rfNumTrees">rfNumTrees: <span class="extype" name="scala.Int">Int</span></span>, <span name="rfMaxDepth">rfMaxDepth: <span class="extype" name="scala.Int">Int</span></span>, <span name="rfMaxBins">rfMaxBins: <span class="extype" name="scala.Int">Int</span></span>, <span name="clusterK">clusterK: <span class="extype" name="scala.Int">Int</span></span>, <span name="clusterMaxIter">clusterMaxIter: <span class="extype" name="scala.Int">Int</span></span>, <span name="clusterEps">clusterEps: <span class="extype" name="scala.Double">Double</span></span>, <span name="clusterFractionEps">clusterFractionEps: <span class="extype" name="scala.Double">Double</span></span>, <span name="clusterSS">clusterSS: <span class="extype" name="scala.Int">Int</span></span>, <span name="clusterThreads">clusterThreads: <span class="extype" name="scala.Int">Int</span></span>, <span name="seed">seed: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span> with <a href="../util/Logging.html" class="extype" name="com.redhat.et.silex.util.Logging">Logging</a> with <span class="extype" name="scala.Product">Product</span></span>
       </span>
       </h4>
       
@@ -50,7 +50,7 @@ Defaults to 0</p></dd><dt class="param">clusterFractionEps</dt><dd class="cmt"><
 value from previous iteration.  Defaults to 0.0001</p></dd><dt class="param">clusterSS</dt><dd class="cmt"><p>If data is larger, use this random sample size.  Defaults to 1000.</p></dd><dt class="param">clusterThreads</dt><dd class="cmt"><p>Use this number of threads to accelerate clustering.  Defaults to 1.</p></dd><dt class="param">seed</dt><dd class="cmt"><p>A seed to use for RNG.  Defaults to using a randomized seed value.
 </p></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">Equals</span>, <span class="extype" name="org.apache.spark.Logging">Logging</span>, <span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <a href="../../../../../scala/package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">Equals</span>, <a href="../util/Logging.html" class="extype" name="com.redhat.et.silex.util.Logging">Logging</a>, <span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <a href="../../../../../scala/package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
         
 
@@ -68,7 +68,7 @@ value from previous iteration.  Defaults to 0.0001</p></dd><dt class="param">clu
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="com.redhat.et.silex.cluster.RandomForestCluster"><span>RandomForestCluster</span></li><li class="in" name="scala.Product"><span>Product</span></li><li class="in" name="scala.Equals"><span>Equals</span></li><li class="in" name="org.apache.spark.Logging"><span>Logging</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="com.redhat.et.silex.cluster.RandomForestCluster"><span>RandomForestCluster</span></li><li class="in" name="scala.Product"><span>Product</span></li><li class="in" name="scala.Equals"><span>Equals</span></li><li class="in" name="com.redhat.et.silex.util.Logging"><span>Logging</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -384,46 +384,7 @@ an automatic estimation of a &quot;good&quot; number of clusters.</p></div></div
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="org.apache.spark.Logging#isTraceEnabled" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="isTraceEnabled():Boolean"></a>
-      <a id="isTraceEnabled():Boolean"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">isTraceEnabled</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
-    </li><li name="org.apache.spark.Logging#log" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="log:org.slf4j.Logger"></a>
-      <a id="log:Logger"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">log</span><span class="result">: <span class="extype" name="org.slf4j.Logger">Logger</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
-    </li><li name="org.apache.spark.Logging#logDebug" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="logDebug(msg:=&gt;String,throwable:Throwable):Unit"></a>
-      <a id="logDebug(⇒String,Throwable):Unit"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">logDebug</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>, <span name="throwable">throwable: <a href="../../../../../scala/package.html#Throwable=Throwable" class="extmbr" name="scala.Throwable">Throwable</a></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
-    </li><li name="org.apache.spark.Logging#logDebug" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="com.redhat.et.silex.util.Logging#logDebug" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="logDebug(msg:=&gt;String):Unit"></a>
       <a id="logDebug(⇒String):Unit"></a>
       <h4 class="signature">
@@ -435,21 +396,8 @@ an automatic estimation of a &quot;good&quot; number of clusters.</p></div></div
         <span class="name">logDebug</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
-    </li><li name="org.apache.spark.Logging#logError" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="logError(msg:=&gt;String,throwable:Throwable):Unit"></a>
-      <a id="logError(⇒String,Throwable):Unit"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">logError</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>, <span name="throwable">throwable: <a href="../../../../../scala/package.html#Throwable=Throwable" class="extmbr" name="scala.Throwable">Throwable</a></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
-    </li><li name="org.apache.spark.Logging#logError" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="../util/Logging.html" class="extype" name="com.redhat.et.silex.util.Logging">Logging</a></dd></dl></div>
+    </li><li name="com.redhat.et.silex.util.Logging#logError" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="logError(msg:=&gt;String):Unit"></a>
       <a id="logError(⇒String):Unit"></a>
       <h4 class="signature">
@@ -461,21 +409,8 @@ an automatic estimation of a &quot;good&quot; number of clusters.</p></div></div
         <span class="name">logError</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
-    </li><li name="org.apache.spark.Logging#logInfo" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="logInfo(msg:=&gt;String,throwable:Throwable):Unit"></a>
-      <a id="logInfo(⇒String,Throwable):Unit"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">logInfo</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>, <span name="throwable">throwable: <a href="../../../../../scala/package.html#Throwable=Throwable" class="extmbr" name="scala.Throwable">Throwable</a></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
-    </li><li name="org.apache.spark.Logging#logInfo" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="../util/Logging.html" class="extype" name="com.redhat.et.silex.util.Logging">Logging</a></dd></dl></div>
+    </li><li name="com.redhat.et.silex.util.Logging#logInfo" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="logInfo(msg:=&gt;String):Unit"></a>
       <a id="logInfo(⇒String):Unit"></a>
       <h4 class="signature">
@@ -487,60 +422,8 @@ an automatic estimation of a &quot;good&quot; number of clusters.</p></div></div
         <span class="name">logInfo</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
-    </li><li name="org.apache.spark.Logging#logName" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="logName:String"></a>
-      <a id="logName:String"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">logName</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
-    </li><li name="org.apache.spark.Logging#logTrace" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="logTrace(msg:=&gt;String,throwable:Throwable):Unit"></a>
-      <a id="logTrace(⇒String,Throwable):Unit"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">logTrace</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>, <span name="throwable">throwable: <a href="../../../../../scala/package.html#Throwable=Throwable" class="extmbr" name="scala.Throwable">Throwable</a></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
-    </li><li name="org.apache.spark.Logging#logTrace" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="logTrace(msg:=&gt;String):Unit"></a>
-      <a id="logTrace(⇒String):Unit"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">logTrace</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
-    </li><li name="org.apache.spark.Logging#logWarning" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="logWarning(msg:=&gt;String,throwable:Throwable):Unit"></a>
-      <a id="logWarning(⇒String,Throwable):Unit"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">logWarning</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>, <span name="throwable">throwable: <a href="../../../../../scala/package.html#Throwable=Throwable" class="extmbr" name="scala.Throwable">Throwable</a></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
-    </li><li name="org.apache.spark.Logging#logWarning" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="../util/Logging.html" class="extype" name="com.redhat.et.silex.util.Logging">Logging</a></dd></dl></div>
+    </li><li name="com.redhat.et.silex.util.Logging#logWarning" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="logWarning(msg:=&gt;String):Unit"></a>
       <a id="logWarning(⇒String):Unit"></a>
       <h4 class="signature">
@@ -552,7 +435,20 @@ an automatic estimation of a &quot;good&quot; number of clusters.</p></div></div
         <span class="name">logWarning</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="../util/Logging.html" class="extype" name="com.redhat.et.silex.util.Logging">Logging</a></dd></dl></div>
+    </li><li name="com.redhat.et.silex.util.Logging#logger" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="logger:org.slf4j.Logger"></a>
+      <a id="logger:Logger"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">logger</span><span class="result">: <span class="extype" name="org.slf4j.Logger">Logger</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../util/Logging.html" class="extype" name="com.redhat.et.silex.util.Logging">Logging</a></dd></dl></div>
     </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a>
       <a id="ne(AnyRef):Boolean"></a>
@@ -938,8 +834,8 @@ the size of the input data.</p></div></div>
               <h3>Inherited from <span class="extype" name="scala.Product">Product</span></h3>
             </div><div class="parent" name="scala.Equals">
               <h3>Inherited from <span class="extype" name="scala.Equals">Equals</span></h3>
-            </div><div class="parent" name="org.apache.spark.Logging">
-              <h3>Inherited from <span class="extype" name="org.apache.spark.Logging">Logging</span></h3>
+            </div><div class="parent" name="com.redhat.et.silex.util.Logging">
+              <h3>Inherited from <a href="../util/Logging.html" class="extype" name="com.redhat.et.silex.util.Logging">Logging</a></h3>
             </div><div class="parent" name="scala.Serializable">
               <h3>Inherited from <span class="extype" name="scala.Serializable">Serializable</span></h3>
             </div><div class="parent" name="java.io.Serializable">
